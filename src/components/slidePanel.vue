@@ -35,7 +35,7 @@ export default {
   position: absolute;
   top:80px;
   left: -30px;
-  border-width:0 8px 20px 8px;
+  border-width:0 8px 18px 8px;
   border-style:none solid solid;
   border-color:transparent transparent white;
   transform: rotate(270deg);

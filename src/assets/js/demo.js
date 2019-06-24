@@ -107,13 +107,17 @@ export default {
   methods: {
     queryMainTable() {
       let params = {
-        orgNo: "dd"
+        orgNo: "dd",
+        // limit: 8,
+        // page: this.page,
       }
       this.post('http://eureka.sy.com.cn:9002/prjm-ms-cons/prjmmscons/csrConsList',params).then((res) => {
         if (res.responseCode == "200") {
-          for (item of res.resultData.dataList) {
-            this.mainTableData.put(item)
-          }
+          console.log(res)
+          // for ( let item of res.resultData.dataList) {
+          //   this.mainTableData.put(item)
+          // }
+          this.mainTableData = res.resultData.dataList
         }
         console.log(this.mainTableData)
       })
